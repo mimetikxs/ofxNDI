@@ -543,6 +543,16 @@ std::string ofxNDIsender::GetNDIversion()
 	return NDIsender.GetNDIversion();
 }
 
+void ofxNDIsender::SetCustomVideoTimecode(uint64_t timecode) 
+{
+	NDIsender.SetCustomVideoTimecode(timecode);
+}
+
+void ofxNDIsender::DisableCustomVideoTimecode() 
+{
+	NDIsender.DisableCustomVideoTimecode();
+}
+
 //
 // =========== Private functions ===========
 //

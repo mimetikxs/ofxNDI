@@ -134,6 +134,10 @@ ofxNDIsend::ofxNDIsend()
 	if(p_NDILib)
 		m_bNDIinitialized = true;
 
+	// Custom timecode
+	m_bCustomTimecode = false;
+	m_customTimecode = 0;
+
 }
 
 
@@ -758,6 +762,16 @@ std::string ofxNDIsend::GetNDIversion()
 		return p_NDILib->version();
 	else
 		return "";
+}
+
+void ofxNDIsend::SetCustomVideoTimecode(uint64_t timecode) 
+{
+	video_frame.timecode = timecode;
+}
+
+void ofxNDIsend::DisableCustomVideoTimecode() 
+{
+	video_frame.timecode = NDIlib_send_timecode_synthesize;
 }
 
 //

@@ -231,6 +231,10 @@ public:
 	// Get the current NDI SDK version
 	std::string GetNDIversion();
 
+	// Custom timecode
+	void SetCustomVideoTimecode(uint64_t timecode);
+	void DisableCustomVideoTimecode();
+
 private:
 
 	ofxNDIsend NDIsender; // Basic sender functions

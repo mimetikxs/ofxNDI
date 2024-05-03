@@ -225,6 +225,10 @@ public:
 	// Get the current NDI SDK version
 	std::string GetNDIversion();
 
+	// Custom timecode
+	void SetCustomVideoTimecode(uint64_t timecode);
+	void DisableCustomVideoTimecode();
+
 private:
 
 	const NDIlib_v4* p_NDILib;
