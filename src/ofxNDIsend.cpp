@@ -133,11 +133,6 @@ ofxNDIsend::ofxNDIsend()
     p_NDILib = libloader.Load();
 	if(p_NDILib)
 		m_bNDIinitialized = true;
-
-	// Custom timecode
-	m_bCustomTimecode = false;
-	m_customTimecode = 0;
-
 }
 
 
